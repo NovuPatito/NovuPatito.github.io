@@ -1,0 +1,160 @@
+body {
+    background: linear-gradient(to bottom, red, orange);
+    font-family: sans-serif;
+    text-align: center;
+    height: 100vh;
+}
+
+#casa {
+    width: 600px;
+    height: 600px;
+    border: 1px solid black;
+    margin: 20px auto;
+    position: relative;
+    background-color: white;
+}
+
+.viga-horizontal {
+    width: 580px;
+    height: 200px;
+    background-color: brown;
+    position: absolute;
+}
+
+.viga-vertical {
+    width: 10px;
+    height: 380px;
+    background-color: black; /* Cambiado a negro para que sea más visible */
+    position: absolute;
+}
+
+.ventana {
+    width: 80px;
+    height: 100px;
+    background-color: lightpink;
+    position: absolute;
+    display: flex; /* Usamos flexbox para centrar las líneas */
+    justify-content: center;
+    align-items: center;
+}
+
+.ventana::before,
+.ventana::after {
+    content: "";
+    position: absolute;
+    background-color: black; /* Color de las líneas */
+}
+
+.ventana::before {
+    width: 100%; /* Ancho de la línea horizontal */
+    height: 5px; /* Grosor de la línea horizontal */
+}
+
+.ventana::after {
+    width: 5px; /* Grosor de la línea vertical */
+    height: 100%; /* Alto de la línea vertical */
+}
+
+.puerta {
+    width: 100px;
+    height: 150px;
+    background-color: lightblue;
+    position: absolute;
+}
+
+.puerta::after {
+    content: "";
+    position: absolute;
+    width: 15px; /* Tamaño de la perilla */
+    height: 15px; /* Tamaño de la perilla */
+    background-color: rgb(0, 0, 0); /* Color de la perilla */
+    border-radius: 50%; /* Hace que la perilla sea un círculo */
+    top: 50%; /* Posiciona la perilla verticalmente en el centro */
+    left: 80%; /* Posiciona la perilla horizontalmente cerca del borde derecho */
+    transform: translateY(-50%); /* Centra la perilla verticalmente */
+}
+
+.techo {
+    width: 0;
+    height: 0;
+    border-left: 300px solid transparent;
+    border-right: 300px solid transparent;
+    border-bottom: 200px solid red;
+    position: absolute;
+}
+
+#mensaje-derrumbado {
+    margin-top: 20px; /* Espacio entre la casa y el mensaje */
+}
+
+#mensaje-derrumbado p {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#mensaje-ganaste {
+    margin-top: 20px; /* Espacio entre la casa y el mensaje */
+}
+
+#mensaje-ganaste p {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.text-center {
+    margin-top: 20px; /* Espacio entre la casa y el texto */
+}
+#respuestas {
+    margin-top: 20px; /* Espacio entre la pregunta y las respuestas */
+}
+
+#tiempo, #puntos {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.imagen-izquierda,
+.imagen-derecha {
+    position: absolute;
+    top: 30%;
+    transform: translateY(-50%);
+    width: 350px; /* Ajusta el ancho de las imágenes según sea necesario */
+    height: auto; /* Ajusta la altura automáticamente para mantener la proporción */
+}
+
+.imagen-izquierda {
+    left: 60px; /* Ajusta la posición izquierda según sea necesario */
+}
+
+.imagen-derecha {
+    right: 60px; /* Ajusta la posición derecha según sea necesario */
+}
+
+.imagen-izquierda img,
+.imagen-derecha img {
+    width: 100%;
+    height: auto;
+    display: block; /* Para evitar espacios en blanco adicionales debajo de las imágenes */
+}
+
+#temporizador,
+#puntaje {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5em; /* Ajusta el tamaño de la fuente según sea necesario */
+}
+
+#temporizador {
+    left: 10%; /* Ajusta la posición izquierda según sea necesario */
+}
+
+#puntaje {
+    right: 18%; /* Ajusta la posición derecha según sea necesario */
+}
